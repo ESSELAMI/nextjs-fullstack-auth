@@ -3,12 +3,12 @@
 import { signIn, signOut } from "@/auth";
 import { AuthError } from "next-auth";
 
-export async function handleCredentialsSignin({ email, password }: {
-    email: string,
+export async function handleCredentialsSignin({ username, password }: {
+    username: string,
     password: string
 }) {
     try {
-        await signIn("credentials", { email, password, redirectTo: "/" });
+        await signIn("credentials", { username, password, redirectTo: "/" });
     } catch (error) {
         if (error instanceof AuthError) {
             switch (error.type) {
@@ -25,7 +25,6 @@ export async function handleCredentialsSignin({ email, password }: {
         throw error;
     }
 }
-
 
 export async function handleGithubSignin() {
     await signIn("github", { redirectTo: "/" });

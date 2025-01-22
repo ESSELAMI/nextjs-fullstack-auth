@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'NotoKufiArabic';
+  src: url('../public/fonts/NotoKufiArabic-Black.ttf') format('truetype'),
+       url('../public/fonts/NotoKufiArabic-Bold.ttf') format('truetype'),
+        url('../public/fonts/NotoKufiArabic-ExtraBold.ttf') format('truetype'),
+        url('../public/fonts/NotoKufiArabic-Light.ttf') format('truetype'),
+        url('../public/fonts/NotoKufiArabic-Medium.ttf') format('truetype'),
+        url('../public/fonts/NotoKufiArabic-Regular.ttf') format('truetype'),
+        url('../public/fonts/NotoKufiArabic-SemiBold.ttf') format('truetype'),
+        url('../public/fonts/NotoKufiArabic-Thin.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
